@@ -27,7 +27,6 @@
       <div class="col-md-6 col-12 mx-auto">
         <h1> Create User</h1>
         <hr>
-        <hr />
         <form:form method="post" action="/admin/user/create1" modelAttribute="newUser">
           <div class="mb-3">
 
