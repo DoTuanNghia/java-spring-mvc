@@ -51,6 +51,15 @@ public class UserController {
         return "admin/user/create";
     }
 
+    @RequestMapping("/admin/user/update/{id}")
+    public String getUpdateUserPage(Model model, @PathVariable long id) {
+        model.addAttribute("id", id);
+        User user = this.userService.getUserById(id);
+        model.addAttribute("user", user);
+        System.out.println(user);
+        return "admin/user/update";
+    }
+
     @RequestMapping(value = "/admin/user/create", method = RequestMethod.POST)
     public String createUserPage(Model model, @ModelAttribute("newUser") User hoidanit) {
         this.userService.handleSaveUser(hoidanit);
