@@ -27,14 +27,14 @@
       <div class="col-md-6 col-12 mx-auto">
         <h1> Update User</h1>
         <hr>
-        <form:form method="post" action="/admin/user/update/${user.id}" modelAttribute="user">
-          <div class="mb-3">
+        <form:form method="post" action="/admin/user/update" modelAttribute="newUser">
+          <div class="mb-3" style="display:none">
             <label class="form-label">Id</label>
             <form:input type="id" class="form-control" path="id" />
           </div>
           <div class="mb-3">
             <label class="form-label">Email</label>
-            <form:input type="email" class="form-control" path="email" />
+            <form:input type="email" class="form-control" path="email" disabled="true" />
           </div>
           <div class="mb-3">
             <label class="form-label">Phone number</label>
